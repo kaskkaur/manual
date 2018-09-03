@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<img id="content" style="position:absolute; padding-left: 80px; padding-top: 520px;" src="content.png" width="200px">
+<img src="large.png" width="100%">
+
+
+<script type="text/javascript">
+	
+
+	window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+   	if (scroll > 450 ) {
+
+   		console.log("450 now")
+   		document.getElementById("content").style["padding-top"] = "20px";
+   		document.getElementById("content").style["position"] = "fixed";
+   	} else {
+
+   		document.getElementById("content").style["padding-top"] = "520px";
+   		document.getElementById("content").style["position"] = "absolute";
+   	}
+
+
+
+    console.log(scroll)
+	});
+
+</script>
+
+
+</body>
+</html>
